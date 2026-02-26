@@ -65,6 +65,115 @@ nav {
     align-items: center;
 }
 
+/* ===================================
+   MOBILE NAV ONLY (UNDER 900px)
+=================================== */
+
+.hamburger {
+    display: none; /* hidden on desktop */
+}
+
+/* Mobile breakpoint */
+@media (max-width: 900px) {
+
+    /* Hide desktop links */
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    /* Center logo properly */
+    nav {
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .logo-img {
+        height: 70px;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #0C2C55;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+	}
+
+	.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleX(0);
+	}
+
+	.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+	}
+
+    /* Dropdown menu */
+    .mobile-menu {
+        position: fixed;
+		top: -300px;   /* hide above viewport */
+        left: 0;
+        width: 100%;
+        background: white;
+        border-bottom: 2px solid #0C2C55;
+		transition: top 0.35s cubic-bezier(.4,0,.2,1);
+        z-index: 1000;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .mobile-menu li {
+        margin: 20px 0;
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        color: #0C2C55;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+	
+	.mobile-menu.active {
+    top: 85px;  /* same as navbar height */
+    }
+
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 500;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 /* ========================
    HERO SECTION
 ======================== */
@@ -457,22 +566,6 @@ nav {
    MEDIA QUERIES - MOBILE
 ======================== */
 @media (max-width: 599px) {
-
-    nav {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 10px;
-    }
-
-    .nav-links {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links li a {
-        font-size: 0.7rem;
-    }
 
     .hero {
         flex-direction: column;

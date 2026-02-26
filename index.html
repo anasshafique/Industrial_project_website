@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Apex Secure Solutions - Whitemail Vulnerability Scanning Solution">
     <link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<link rel="icon" href="Assets/Apex.ico" type="image/x-icon">
     <title>Apex Secure Solutions</title>
 </head>
 <body>
@@ -13,24 +15,43 @@
 <header>
     <nav>
         <!-- left nav links -->
-        <ul class="nav-links">
+        <ul class="nav-links nav-left">
             <li><a href="#home">Home</a></li>
             <li><a href="#project">Project</a></li>
         </ul>
 
         <!-- logo centered -->
         <div class="logo">
-            <img src="/Assets/file.svg" alt="Apex Secure Solutions Logo" class="logo-img">
+            <img src="Assets/Apex_logo.png" alt="Apex Secure Solutions Logo" class="logo-img">
         </div>
 
         <!-- right nav links -->
-        <ul class="nav-links">
+        <ul class="nav-links nav-right">
             <li><a href="#team">Team</a></li>
             <li><a href="#about">About</a></li>
-            
         </ul>
+
+        <!-- hamburger -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
-</header>
+
+    <!-- mobile dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+
+    <!-- overlay -->
+    <div class="overlay" id="overlay"></div>
+</header
 
 <main>
 
@@ -43,14 +64,14 @@
             <p>We are a team of 7 Computer Science students developing an AI-powered Whitemail Vulnerability Scanning Solution for the Job Center. Our platform automates the processing of 25,000 daily documents with accuracy, speed, and full GDPR compliance.</p>
             <div class="hero-buttons">
                 <a href="#project" class="hero-btn">Our Project</a>
-                <a href="#team" class="hero-btn">Meet the Team</a>
+                <a href="#Contact" class="hero-btn">Contact Us</a>
             </div>
         </div>
 
         <div class="hero-right">
             <!-- logo display on hero -->
             <div class="hero-logo-box">
-                <img src="Assets/file.svg" alt="Apex Secure Solutions" class="hero-logo">
+                <img src="Assets/Apex_logo.png" alt="Apex Secure Solutions" class="hero-logo">
             </div>
         </div>
     </section>
@@ -85,9 +106,9 @@
                 <!-- Member 1 -->
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member1.jpg" alt="Member 1">
+                        <img src="/Assets/Megan Parsons.png" alt="Member 1">
                     </div>
-                    <p class="member-name">Member Name</p>
+                    <p class="member-name">Megan Parsons</p>
                     <p class="member-role">Project Manager</p>
                     <p class="member-contribution">Responsible for overall project coordination, timelines, and ensuring deliverables are met on schedule.</p>
                 </div>
@@ -95,51 +116,53 @@
                 <!-- Member 2 -->
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member2.jpg" alt="Member 2">
+                        <img src="/Assets/Abi Robson.png" alt="Member 2">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">lorem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Abi Robson</p>
+                    <p class="member-role">Deputy Project Manager</p>
+                    <p class="member-contribution">Assist with project planning by organising tasks, setting clear deadlines, and coordinating team members. Support documentation for planning and design, ensuring everything is clear, structured, and aligned with project goals.</p>
                 </div>
 
                 <!-- Member 3 -->
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member3.jpg" alt="Member 3">
+                        <img src="/Assets/Andrew Bell.jpeg" alt="Member 3">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">lorem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Andrew Bell</p>
+                    <p class="member-role">Lead Developer</p>
+                    <p class="member-contribution">Responsible for overseeing the development process, including design, programming, and testing, guiding the technical team, reviewing code quality, and ensuring the product is built efficiently and meets project requirements.</p>
                 </div>
 
-                <!-- Member 4 -->
+                  <!-- member 4 -->
+            <div class="team-grid-center">
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member4.jpg" alt="Member 4">
+                        <img src="/Assets/Ana.jpeg" alt="Member 7">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">lorem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Anas Shafiq</p>
+                    <p class="member-role">Development, Testing, Design, Marketing & Planning</p>
+                    <p class="member-contribution">Responsible for contributing to development, design, testing, marketing, and project planning, ensuring the product is functional, visually effective, well-promoted, and aligned with overall project objectives</p>
                 </div>
+            </div>
 
                 <!-- Member 5 -->
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member5.jpg" alt="Member 5">
+                        <img src="/Assets/Tatiana.jpeg" alt="Member 5">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">lorem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Tatiana Shapochkina</p>
+                    <p class="member-role">Development, Design & Planning</p>
+                    <p class="member-contribution">Responsible for contributing to project planning, creating design structures and layouts, and supporting development to ensure the final product is functional, user-friendly, and aligned with project goals.</p>
                 </div>
 
                 <!-- Member 6 -->
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member6.jpg" alt="Member 6">
+                        <img src="/Assets/Abdul Wahab 2.jpeg" alt="Member 6">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">loem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Wahab Olanipekun</p>
+                    <p class="member-role">Development, Marketing, Planning & Testing</p>
+                    <p class="member-contribution">Responsible for supporting development, contributing to project planning, assisting with marketing strategies, and conducting testing to ensure the product is functional, well-promoted, and meets quality standards.</p>
                 </div>
 
             </div>
@@ -148,11 +171,11 @@
             <div class="team-grid-center">
                 <div class="member-card">
                     <div class="member-pic">
-                        <img src="member7.jpg" alt="Member 7">
+                        <img src="/Assets/jordan 2.jpeg" alt="Member 7">
                     </div>
-                    <p class="member-name">lorem</p>
-                    <p class="member-role">lorem</p>
-                    <p class="member-contribution">lorem</p>
+                    <p class="member-name">Jordan Higham</p>
+                    <p class="member-role">Research, Documentation & Communication</p>
+                    <p class="member-contribution">Responsible for conducting research, preparing and organising project documentation, and maintaining clear communication between team members to ensure accurate information and smooth collaboration.</p>
                 </div>
             </div>
 
@@ -170,7 +193,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section class="contact" id="Contact">
         <div class="container">
             <p class="section-label light">GET IN TOUCH</p>
             <h2 class="section-title light">Contact Us</h2>
